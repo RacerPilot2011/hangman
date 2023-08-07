@@ -1,4 +1,3 @@
-from nltk.corpus import words
 import random
 import os
 import platform
@@ -9,14 +8,17 @@ def clear():
         os.system("cls")
     else:
         os.system("clear")
+def load_words():
+    with open('words_alpha.txt') as word_file:
+        valid_words = set(word_file.read().split())
 
+    return valid_words
 
 clear()
 
 stop_at = 0
-word_list = words.words()
 wrong = 0
-a = list(word_list)
+a = load_words()
 b = random.choice(a)
 c = len(b)
 d = "_" * c
