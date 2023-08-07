@@ -18,10 +18,11 @@ clear()
 
 stop_at = 0
 wrong = 0
-a = load_words()
+g = load_words()
+a = list(g)
 b = random.choice(a)
 c = len(b)
-d = "_" * c
+d = "-" * c
 print(d)
 while True:
     e = input("Letter:")
