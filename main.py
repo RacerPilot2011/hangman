@@ -45,7 +45,7 @@ while True:
             word_so_far = "".join(x if x in guess else word_so_far[i]
                                   for i, x in enumerate(b))
             word = word+ word_so_far
-            print(f"{word_so_far}")
+            print(f"{word}")
             print(f"Wrong: {wrong}")
         else:
             print("Wrong!")
