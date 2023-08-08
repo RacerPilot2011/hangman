@@ -27,7 +27,7 @@ b = random.choice(a)
 c = len(b)
 d = "-" * c
 print(d)
-global word
+word = ""
 while True:
 
 
