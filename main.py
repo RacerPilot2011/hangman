@@ -48,6 +48,8 @@ while True:
             print(f"Wrong: {wrong}")
         else:
             print("Wrong!")
+            print(f"{word_so_far}")
+            print(f"Wrong: {wrong}")
             if wrong == stop_at:
                 print("All over.")
                 break
