@@ -40,15 +40,16 @@ while True:
     word_so_far = "".join("-" for letter in b)
     for n in range(5):
         guess = get_single_letter_input()
-        word_so_far = "".join(x if x in guess else word_so_far[i]
-                              for i, x in enumerate(b))
+        if guess in b:
+            word_so_far = "".join(x if x in guess else word_so_far[i]
+                                  for i, x in enumerate(b))
 
-        print(f"{word_so_far}")
-        print(f"Wrong:: {wrong}")
-    else:
-        print("Wrong!")
-        if wrong == stop_at:
-            print("All over.")
-            break
+            print(f"{word_so_far}")
+            print(f"Wrong: {wrong}")
         else:
-            wrong = wrong + 1
+            print("Wrong!")
+            if wrong == stop_at:
+                print("All over.")
+                break
+            else:
+                wrong = wrong + 1
