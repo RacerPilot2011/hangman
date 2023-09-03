@@ -57,6 +57,13 @@ while True:
                 break
             else:
                 wrong = wrong + 1
+            word_so_far = "".join(x if x in guess else word_so_far[i]
+                                  for i, x in enumerate(b))
+
+            word_so_far = list(word_so_far)
+            wor = word_so_far.index(guess)
+            word_so_far[wor] = guess
+            word = ''.join(word_so_far)
             print("Wrong!")
             print(f"{word}")
             print(f"Wrong: {wrong}")
