@@ -19,9 +19,6 @@ def load_words():
         valid_words = set(word_file.read().split())
 
     return valid_words
-
-
-clear()
 stop_at = 6
 wrong = 0
 g = load_words()
@@ -55,11 +52,12 @@ while True:
             print(f"{word}")
             print(f"Wrong: {wrong}")
         else:
-            print("Wrong!")
-            print(f"{word}")
-            print(f"Wrong: {wrong}")
             if wrong == stop_at:
                 print("All over.")
                 break
             else:
                 wrong = wrong + 1
+            print("Wrong!")
+            print(f"{word}")
+            print(f"Wrong: {wrong}")
+
