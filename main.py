@@ -87,6 +87,11 @@ def go():
                 if first == True:
                     first = False
                     word = ''.join(word_so_far)
+                    wrong = wrong + 1
+                    print("Wrong!")
+                    print(f"{word}")
+                    print(f"Wrong: {wrong}")
+                    tries += 1
                 else:
                     if wrong == stop_at:
                         print("All over.")
