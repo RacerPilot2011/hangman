@@ -25,11 +25,13 @@ def clear():
     else:
         os.system("clear")
 
+
 clear()
 print("Welcome to hangman!")
 time.sleep(2)
 print("You will have ten attempts.")
 time.sleep(2)
+
 
 def load_words():
     with open('words_alpha.txt') as word_file:
@@ -102,4 +104,6 @@ def go():
                     print(f"{word}")
                     print(f"Wrong: {wrong}")
                     tries += 1
+
+
 go()
