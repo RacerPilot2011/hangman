@@ -83,6 +83,7 @@ def go():
                     again()
                 tries += 1
             else:
+                word = ''.join(word_so_far)
                 if wrong == stop_at:
                     print("All over.")
                     clear()
