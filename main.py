@@ -39,6 +39,7 @@ def load_words():
 
 
 def go():
+    first = True
     stop_at = 10
     wrong = 0
     g = load_words()
@@ -83,7 +84,11 @@ def go():
                     again()
                 tries += 1
             else:
-                word = ''.join(word_so_far)
+                if first == True:
+                    first = False
+                    word = ''.join(word_so_far)
+                else:
+                    break
                 if wrong == stop_at:
                     print("All over.")
                     clear()
