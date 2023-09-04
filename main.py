@@ -25,7 +25,7 @@ def clear():
     else:
         os.system("clear")
 
-
+clear()
 print("Welcome to hangman!")
 time.sleep(2)
 print("You will have ten attempts.")
@@ -88,14 +88,13 @@ def go():
                     first = False
                     word = ''.join(word_so_far)
                 else:
-                    break
-                if wrong == stop_at:
-                    print("All over.")
-                    clear()
-                else:
-                    wrong = wrong + 1
-                print("Wrong!")
-                print(f"{word}")
-                print(f"Wrong: {wrong}")
-                tries += 1
+                    if wrong == stop_at:
+                        print("All over.")
+                        clear()
+                    else:
+                        wrong = wrong + 1
+                    print("Wrong!")
+                    print(f"{word}")
+                    print(f"Wrong: {wrong}")
+                    tries += 1
 go()
